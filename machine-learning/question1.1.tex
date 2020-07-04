@@ -1,5 +1,25 @@
 \item{\textbf{逆矩阵与伪逆矩阵的异同}}\label{q1.1}
 
 \begin{enumerate}
-\item{奇异矩阵}
+\item{行列式及伴随矩阵的计算}
+
+给定方阵$\mathbf{A}$，可以根据其行列式$\mathit{det}(\mathbf{A})$，定义其余子式矩阵$\mathbf{C}$，满足
+\begin{equation*}
+c_{ij} = (-1)^{i+j} * \mathit{det}\begin{bmatrix}
+a_{1,1} & \dots & a_{1,j-1} & \Box & a_{1,j+1} & \dots & a_{1,n} \\
+\vdots & \vdots & \vdots & \Box & \vdots & \vdots & \vdots \\
+a_{i-1,1} & \dots  & a_{i-1,j-1} & \Box & a_{i-1,j+1} & \dots  & a_{i-1,n} \\
+\Box & \Box & \Box & \Box & \Box & \Box & \Box \\
+a_{i+1,1} & \dots  & a_{i+1,j-1} & \Box & a_{i+1,j+1} & \dots  & a_{i+1,n} \\
+\vdots & \vdots & \vdots & \Box & \vdots & \vdots & \vdots \\
+a_{m,1} & \dots & a_{m,j-1} & \Box & a_{m,j+1} & \dots & a_{m,n}
+\end{bmatrix}
+\end{equation*}
+A的伴随矩阵$\mathit{adj}(\mathbf{A}) = \mathbf{C}^{T}$
+当$\mathit{det}(\mathbf{A})$有定义且$\neq 0$（非奇异方阵）时，A的逆矩阵$A^{-1} = \frac{\mathit{adj}(\mathbf{A})}{\mathit{det}(\mathbf{A})}$。
+
+\item{伪逆矩阵定义及计算}
+
+X
+
 \end{enumerate}
