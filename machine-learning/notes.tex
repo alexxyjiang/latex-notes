@@ -1,6 +1,8 @@
 \documentclass[UTF8]{ctexart}
 \usepackage{enumitem}
-\setlist[enumerate,1]{label=\arabic* :, font=\textbf}
+\usepackage{hyperref}
+\setlist[enumerate,1]{leftmargin=0in, label=Q\thesection.\arabic*., font=\textbf}
+\setlist[enumerate,2]{leftmargin=0in, label=\alph*., font = \textbf}
 \begin{document}
 \title{Machine Learning课程问题笔记}
 \author{Xueyuan Jiang (alexxyjiang@gmail.com)}
@@ -8,6 +10,10 @@
 \maketitle
 \pagestyle{plain}
 \include{symbol}
+\section{数学问题}
+\begin{enumerate}
+\include{question1.1}
+\end{enumerate}
 \section{Octave软件问题}
 \begin{enumerate}
 \include{question2.1}
