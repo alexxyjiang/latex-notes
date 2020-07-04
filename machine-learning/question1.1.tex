@@ -1,11 +1,10 @@
-\item{\textbf{逆矩阵与伪逆矩阵的异同}}\label{q1.1}
+\item{\textbf{逆矩阵与伪逆矩阵}}\label{q1.1}
 
 \begin{enumerate}
-\item{行列式及伴随矩阵的计算}
+\item{逆矩阵}
 
 给定方阵$\mathbf{A}$，可以根据其行列式$\mathit{det}(\mathbf{A})$，定义其余子式矩阵$\mathbf{C}$，满足
-\begin{equation*}
-c_{ij} = (-1)^{i+j} * \mathit{det}\begin{bmatrix}
+$$c_{ij} = (-1)^{i+j} * \mathit{det}\begin{bmatrix}
 a_{1,1} & \dots & a_{1,j-1} & \Box & a_{1,j+1} & \dots & a_{1,n} \\
 \vdots & \vdots & \vdots & \Box & \vdots & \vdots & \vdots \\
 a_{i-1,1} & \dots  & a_{i-1,j-1} & \Box & a_{i-1,j+1} & \dots  & a_{i-1,n} \\
@@ -13,13 +12,17 @@ a_{i-1,1} & \dots  & a_{i-1,j-1} & \Box & a_{i-1,j+1} & \dots  & a_{i-1,n} \\
 a_{i+1,1} & \dots  & a_{i+1,j-1} & \Box & a_{i+1,j+1} & \dots  & a_{i+1,n} \\
 \vdots & \vdots & \vdots & \Box & \vdots & \vdots & \vdots \\
 a_{m,1} & \dots & a_{m,j-1} & \Box & a_{m,j+1} & \dots & a_{m,n}
-\end{bmatrix}
-\end{equation*}
+\end{bmatrix}$$
 A的伴随矩阵$\mathit{adj}(\mathbf{A}) = \mathbf{C}^{T}$
-当$\mathit{det}(\mathbf{A})$有定义且$\neq 0$（非奇异方阵）时，A的逆矩阵$A^{-1} = \frac{\mathit{adj}(\mathbf{A})}{\mathit{det}(\mathbf{A})}$。
+当$\mathit{det}(\mathbf{A})$有定义且$\neq 0$（非奇异方阵）时，A的逆矩阵
+$$A^{-1} = \frac{\mathit{adj}(\mathbf{A})}{\mathit{det}(\mathbf{A})}$$
 
-\item{伪逆矩阵定义及计算}
+\item{伪逆矩阵}
 
-X
+当矩阵$\mathbf{A}$不是方阵，或$\mathbf{A}$是奇异方阵时，无法直接获得其逆矩阵。此时，若$\mathbf{AGA} = \mathbf{A}$，则称矩阵$\mathbf{G}$为矩阵$\mathbf{A}$的伪逆矩阵。显然，当矩阵$\mathbf{A}$可逆时，其逆矩阵和伪逆矩阵相同。若
+$$\mathbf{A} = \mathbf{P} \begin{bmatrix}\mathbf{I}_{r} & 0 \\ 0 & 0 \end{bmatrix} \mathbf{Q}$$
+其中$\mathbf{P}$及$\mathbf{Q}$为可逆矩阵，则伪逆矩阵
+$$\mathbf{G} = \mathbf{Q}^{-1} \begin{bmatrix} \mathbf{I}_{r} & \mathbf{U} \\ \mathbf{W} & \mathbf{V} \end{bmatrix} \mathbf{P}^{-1}$$
+其中$\mathbf{U}, \mathbf{V}, \mathbf{W}$为任意矩阵。
 
 \end{enumerate}
